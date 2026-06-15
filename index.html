@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Summarizer Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="glass-panel">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1 class="app-title">AI Summarizer Pro</h1>
+      <p class="app-subtitle">Paste text or upload an image — get an intelligent summary instantly.</p>
+    </header>
+
+    <!-- Form -->
+    <div>
+
+      <!-- Text Input -->
+      <div class="field-group">
+        <label for="textInput">Your Text</label>
+        <textarea
+          id="textInput"
+          rows="6"
+          placeholder="Paste the content you want to summarize here… (Ctrl+Enter to submit)"
+        ></textarea>
+      </div>
+
+      <!-- Image Upload -->
+      <div class="field-group">
+        <label>Attach Image <span style="color:#475569;">(optional)</span></label>
+        <div class="file-input-wrapper">
+          <label class="file-label-btn" for="imageInput">Choose File</label>
+          <input type="file" id="imageInput" accept="image/*" />
+          <span class="file-name-display" id="fileNameDisplay">No file chosen</span>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button id="summarizeBtn" class="btn-primary">
+        <span id="spinner" class="spinner"></span>
+        <span id="btnText">Summarize Now</span>
+      </button>
+
+      <!-- Output -->
+      <div id="outputContainer" class="output-container">
+        <h3>Summary</h3>
+        <div id="summaryOutput" class="output-box"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
